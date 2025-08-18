@@ -1,0 +1,305 @@
+@import url('https://fonts.googleleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+
+body {
+  /* Purple to rose/pink gradient */
+  background: linear-gradient(135deg, #1c05ebbe, #f43f5d98);
+  font-family: 'Fredoka', sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+
+.card {
+transform-style: preserve-3d;
+transition: transform 1s;
+position: relative;
+width: 340px;
+height: 480px;
+cursor: pointer;
+margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+.card {
+width: 400px;
+height: 560px;
+}
+}
+
+.card-open {
+transform: rotateY(180deg);
+}
+
+.card-front, .card-inside {
+backface-visibility: hidden;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 1.5rem;
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+padding: 1.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+overflow: hidden;
+}
+
+.card-front {
+background: linear-gradient(to bottom right, #3B82F6, #0be199)
+}
+
+.card-inside {
+transform: rotateY(180deg);
+background-color: white;
+}
+
+.confetti {
+position: absolute;
+width: 10px;
+height: 10px;
+opacity: 0;
+animation: fall 5s ease-out infinite;
+}
+
+@keyframes fall {
+0% {
+transform: translateY(-100px) rotate(0deg);
+opacity: 1;
+}
+100% {
+transform: translateY(600px) rotate(360deg);
+opacity: 0;
+}
+}
+
+.bounce {
+animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+from { transform: translateY(0); }
+to { transform: translateY(-15px); }
+}
+
+.rotate {
+animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+
+.character {
+transition: transform 0.3s ease;
+}
+
+.character:hover {
+transform: scale(1.1);
+}
+
+.name-highlight {
+    background: linear-gradient(120deg, #4c1d95 0%, #7e22ce 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }  
+
+.signature {
+font-family: 'Brush Script MT', cursive;
+}
+
+.text-center {
+text-align: center;
+}
+
+.text-white {
+color: white;
+}
+
+.text-gray-600 {
+color: #4b5563;
+}
+
+.text-gray-700 {
+color: #374151;
+}
+
+.text-blue-600 {
+color: #2563eb;
+}
+
+.text-purple-700 {
+color: #7e22ce;
+}
+
+.text-yellow-300 {
+color: #fcd34d;
+}
+
+.text-transparent {
+color: transparent;
+}
+
+.bg-gradient-to-r {
+background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-yellow-200 {
+--tw-gradient-from: #fef08a;
+--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(254, 240, 138, 0));
+}
+
+.to-yellow-400 {
+--tw-gradient-to: #facc15;
+}
+
+.bg-clip-text {
+-webkit-background-clip: text;
+background-clip: text;
+}
+
+.drop-shadow-lg {
+filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.font-bold {
+font-weight: 700;
+}
+
+.font-semibold {
+font-weight: 600;
+}
+
+.font-medium {
+font-weight: 500;
+}
+
+.text-sm {
+font-size: 0.875rem;
+line-height: 1.25rem;
+}
+
+.text-lg {
+font-size: 1.125rem;
+line-height: 1.75rem;
+}
+
+.text-xl {
+font-size: 1.25rem;
+line-height: 1.75rem;
+}
+
+.text-2xl {
+font-size: 1.5rem;
+line-height: 2rem;
+}
+
+.text-3xl {
+font-size: 1.875rem;
+line-height: 2.25rem;
+}
+
+.text-4xl {
+font-size: 2.25rem;
+line-height: 2.5rem;
+}
+
+.text-5xl {
+font-size: 3rem;
+line-height: 1;
+}
+
+.text-6xl {
+font-size: 3.75rem;
+line-height: 1;
+}
+
+.text-7xl {
+font-size: 4.5rem;
+line-height: 1;
+}
+
+.mt-2 {
+margin-top: 0.5rem;
+}
+
+.mt-3 {
+margin-top: 0.75rem;
+}
+
+.mt-4 {
+margin-top: 1rem;
+}
+
+.mt-6 {
+margin-top: 1.5rem;
+}
+
+.mb-2 {
+margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+margin-bottom: 1rem;
+}
+
+.mb-6 {
+margin-bottom: 1.5rem;
+}
+
+.ml-2 {
+margin-left: 0.5rem;
+}
+
+.z-10 {
+z-index: 10;
+}
+
+.flex {
+display: flex;
+}
+
+.items-center {
+align-items: center;
+}
+
+.items-end {
+align-items: flex-end;
+}
+
+.justify-center {
+justify-content: center;
+}
+
+.space-x-4 > * + * {
+margin-left: 1rem;
+}
+
+.space-x-6 > * + * {
+margin-left: 1.5rem;
+}
+
+.px-4 {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+.relative {
+position: relative;
+}
+
+.absolute {
+position: absolute;
+}
