@@ -303,3 +303,13 @@ position: relative;
 .absolute {
 position: absolute;
 }
+
+/* Mobile centering fix */
+@media (max-width: 767px) {
+  .card {
+    margin: 0; /* remove auto margins to avoid side shifts */
+    position: relative; /* keep relative for flipping */
+    left: 50%;          /* move to center horizontally */
+    transform: translateX(-50%); /* shift back half width */
+  }
+}
