@@ -58,9 +58,10 @@ background: linear-gradient(to bottom right, #3B82F6, #0be199)
 }
 
 .card-inside {
-transform: rotateY(180deg);
-background-color: white;
+  transform: rotateY(180deg);
+  background: linear-gradient(to bottom right, #f178dd, #ddd766);
 }
+
 
 .confetti {
 position: absolute;
@@ -334,3 +335,4 @@ body {
   min-height: 100vh;
   padding: 1rem;
 }
+
